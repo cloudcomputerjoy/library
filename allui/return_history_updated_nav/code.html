@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Return History | Atheneum</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "secondary-fixed-dim": "#d2bbff",
+                    "on-tertiary-fixed": "#002109",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#b4c5ff",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-secondary-fixed": "#25005a",
+                    "on-secondary-fixed-variant": "#5a00c6",
+                    "on-tertiary-container": "#c1ffc5",
+                    "secondary-container": "#8a4cfc",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface-variant": "#434655",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "outline-variant": "#c3c6d7",
+                    "primary-fixed": "#dbe1ff",
+                    "on-tertiary-fixed-variant": "#005321",
+                    "tertiary-container": "#007e37",
+                    "on-secondary": "#ffffff",
+                    "outline": "#737686",
+                    "background": "#f8f9fa",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "surface-tint": "#0053db",
+                    "surface-bright": "#f8f9fa",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-background": "#191c1d",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-container-low": "#f3f4f5",
+                    "on-primary-container": "#eeefff",
+                    "secondary-fixed": "#eaddff",
+                    "on-surface": "#191c1d",
+                    "tertiary-fixed-dim": "#4ae176",
+                    "on-secondary-container": "#fffbff",
+                    "primary": "#004ac6",
+                    "on-primary-fixed": "#00174b",
+                    "secondary": "#712ae2",
+                    "surface-dim": "#d9dadb",
+                    "inverse-surface": "#2e3132",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e7e8e9",
+                    "primary-container": "#2563eb",
+                    "tertiary": "#006229",
+                    "tertiary-fixed": "#6bff8f",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "16px",
+                    "xl": "24px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9fa;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-effect bg-white/70 dark:bg-slate-900/70 shadow-[0_20px_40px_rgba(0,0,0,0.04)] px-6 py-4 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors active:scale-95 duration-200" style="">
+<span class="material-symbols-outlined text-on-surface" style="">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="font-headline font-bold text-2xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600" style="">Return History</h1>
+<p class="text-[13px] text-on-surface-variant font-medium" style="">Your past returns and settled fees</p>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low hover:opacity-80 transition-opacity" style="">
+<span class="material-symbols-outlined text-primary" data-icon="search" style="">search</span>
+</button>
+</div>
+</header>
+<main class="pt-28 px-6 space-y-6">
+<!-- Search & Filter Cluster -->
+<section class="flex flex-col gap-4">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl" style="">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest rounded-xl border-none focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-on-surface-variant font-medium transition-all duration-300" placeholder="Search books by title or author" type="text"/>
+</div>
+<div class="flex items-center justify-between">
+<button class="flex items-center gap-2 px-5 py-2.5 bg-surface-container-low rounded-full hover:bg-surface-container-high transition-colors" style="">
+<span class="material-symbols-outlined text-lg" data-icon="calendar_month" style="">calendar_month</span>
+<span class="text-sm font-semibold" style="">Filter by Date</span>
+<span class="material-symbols-outlined text-lg" style="">expand_more</span>
+</button>
+<span class="text-xs font-bold text-on-surface-variant/60 tracking-widest uppercase" style="">Showing 24 Returns</span>
+</div>
+</section>
+<!-- Return History List -->
+<section class="space-y-5">
+<!-- Card 1: On-Time Return -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.04)] p-5 flex flex-col gap-5 border border-transparent hover:border-outline-variant/15 transition-all">
+<div class="flex gap-4">
+<div class="w-20 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover" data-alt="minimalist blue book cover with gold title typography titled The Republic of Plato" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5NJf1iv-Enxs-4Yh7gJPjJBQXXbiXIsMbtiQyq6wwviNec8qZdNVsLrrUmu_gRECxBzppkbsT0LI-EEXmsX3U8CURcjx1mSgXTegLDWzDVD37c3Q0ZUzoH5aGTVxiiAt4nY59IlG47n4e6Cp9_rGmVU1qTje60c9oNN-3PYc8VP1rXiPTMr6q4g0pPczlFJdVASW2XVfWI_u3dyErG7ZeIAhbQ126ml2JnoJNq46bnTuWxQNIKVccBh3asa8mLO41kLJR9_3nU08" style=""/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight" style="">The Republic</h3>
+<p class="text-on-surface-variant text-sm font-medium" style="">Plato</p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-tertiary-container/10 text-tertiary-container text-[11px] font-bold rounded-full flex items-center gap-1" style="">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>check_circle</span>
+                                Returned On Time
+                            </span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant text-[11px] font-bold rounded-full" style="">Good Condition</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-surface-container flex items-center justify-between">
+<div class="flex items-start gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-lg">calendar_today</span><div class="flex flex-col gap-0.5"><span class="text-[10px] font-bold uppercase tracking-wider opacity-60">Borrowed</span><span class="text-xs font-semibold px-2 py-0.5 rounded bg-blue-50 text-blue-700">01 Oct 2023</span></div><div class="flex flex-col gap-0.5 ml-2"><span class="text-[10px] font-bold uppercase tracking-wider opacity-60">Returned</span><span class="text-xs font-semibold px-2 py-0.5 rounded bg-purple-50 text-purple-700">15 Oct 2023</span></div></div>
+<div class="flex items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-lg" style="">verified</span>
+<span class="text-xs font-bold" style="">No Fees</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Late Return with Fine -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.04)] p-5 flex flex-col gap-5 border border-transparent hover:border-outline-variant/15 transition-all">
+<div class="flex gap-4">
+<div class="w-20 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover" data-alt="artistic book cover showing a surrealist clock with deep purple and violet textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbWFAUGYOLPFNXCT_FQvNFfpF_BQ99BY8-IqwlC5Dt5_Pul6758TrDsQVCc1SFqX864Rt46uPNEEwJEbzV78sFPTtiwZrZd1uH0_2jwz3Y0QjxXeDrXTJ0mDsL0CRKfdVrkKzmMoC__weiUQSNlInaPl3W045enzKBdZEG-sVQWF5RsTUkF2ZSsx9YeaXP309it4sOmOGy_oMBkixvfE-DtbyZmfbD30QfIF-pUmTHc2W1QwKHo1vdHt3h05fY3UGbjwAuZcyY7lQ" style=""/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight" style="">Beyond Good &amp; Evil</h3>
+<p class="text-on-surface-variant text-sm font-medium" style="">Friedrich Nietzsche</p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-error-container/10 text-error text-[11px] font-bold rounded-full flex items-center gap-1" style="">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>warning</span>
+                                Returned Late
+                            </span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant text-[11px] font-bold rounded-full" style="">Minor Damage</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-surface-container flex items-center justify-between">
+<div class="flex items-start gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-lg">calendar_today</span><div class="flex flex-col gap-0.5"><span class="text-[10px] font-bold uppercase tracking-wider opacity-60">Borrowed</span><span class="text-xs font-semibold px-2 py-0.5 rounded bg-blue-50 text-blue-700">15 Sep 2023</span></div><div class="flex flex-col gap-0.5 ml-2"><span class="text-[10px] font-bold uppercase tracking-wider opacity-60">Returned</span><span class="text-xs font-semibold px-2 py-0.5 rounded bg-purple-50 text-purple-700">02 Oct 2023</span></div></div>
+<div class="flex items-center gap-1.5 bg-primary-container/10 px-3 py-1.5 rounded-lg text-primary-container">
+<span class="material-symbols-outlined text-lg" data-icon="receipt_long" style="">receipt_long</span>
+<span class="text-xs font-extrabold tracking-tight" style="">৳80 Paid</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Neutral Return -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.04)] p-5 flex flex-col gap-5 border border-transparent hover:border-outline-variant/15 transition-all">
+<div class="flex gap-4">
+<div class="w-20 h-28 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover" data-alt="dark book cover with white geometric illustration of an owl and ancient Greek patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZAzp3N-fBIeWRIbt8_5wGCz_PneMtsJflWrP0Iy43a7JgNqA_10vhwgfsSkefun3NxY3xlZ2aEd3HUmrrM9PRfafteNrxMZQBVvRVPShzO_6ndZqI4cooRmMGXdDYnuEF0ITbgWXw4qWE9_7E3KBXoJ4eTzLGLlny58U1mzW275RC1xIg7XstNoaeZqGC9kJc42nw2tBSacK3RHH7LPngK1JVfy3GPSR2iYwdXFrXHfuwvSFzuDd3i1T98I3xLEcoadFeoeyrDiM" style=""/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface leading-tight" style="">Meditations</h3>
+<p class="text-on-surface-variant text-sm font-medium" style="">Marcus Aurelius</p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-tertiary-container/10 text-tertiary-container text-[11px] font-bold rounded-full flex items-center gap-1" style="">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>check_circle</span>
+                                Returned On Time
+                            </span>
+<span class="px-3 py-1 bg-surface-container-low text-on-surface-variant text-[11px] font-bold rounded-full" style="">Excellent Condition</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-surface-container flex items-center justify-between">
+<div class="flex items-start gap-3 text-on-surface-variant"><span class="material-symbols-outlined text-lg">calendar_today</span><div class="flex flex-col gap-0.5"><span class="text-[10px] font-bold uppercase tracking-wider opacity-60">Borrowed</span><span class="text-xs font-semibold px-2 py-0.5 rounded bg-blue-50 text-blue-700">01 Sep 2023</span></div><div class="flex flex-col gap-0.5 ml-2"><span class="text-[10px] font-bold uppercase tracking-wider opacity-60">Returned</span><span class="text-xs font-semibold px-2 py-0.5 rounded bg-purple-50 text-purple-700">22 Sep 2023</span></div></div>
+<div class="flex items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-lg" style="">verified</span>
+<span class="text-xs font-bold" style="">No Fees</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Empty State Preview (Normally hidden, but shown for completion if list was empty) -->
+<div class="hidden flex-col items-center justify-center py-20 text-center space-y-4">
+<div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant/40 text-5xl" style="">history</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-headline font-bold text-lg text-on-surface" style="">No return history yet</h4>
+<p class="text-on-surface-variant text-sm max-w-[240px]" style="">Your completed returns will appear here once you finish a session.</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-end px-2 pb-6 pt-2 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-t border-slate-100 dark:border-slate-800 shadow-[0_-10px_30px_rgba(0,0,0,0.03)]"><!-- Library (Active) -->
+<a class="flex flex-col items-center justify-center gap-1 group" href="#">
+<div class="bg-blue-50 dark:bg-blue-900/20 px-6 py-2 rounded-full mb-1 transition-all">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400 font-bold" style='font-variation-settings: "FILL" 0, "wght" 600;'>book_2</span>
+</div>
+<span class="text-[10px] font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase">Library</span>
+</a>
+<!-- Search -->
+<a class="flex flex-col items-center justify-center gap-1 group" href="#">
+<div class="px-6 py-2 rounded-full mb-1">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-blue-500 transition-colors" style='font-variation-settings: "FILL" 0, "wght" 500;'>search</span>
+</div>
+<span class="text-[10px] font-extrabold tracking-widest text-slate-400 group-hover:text-blue-500 uppercase transition-colors">Search</span>
+</a>
+<!-- Scan -->
+<a class="flex flex-col items-center justify-center gap-1 group" href="#">
+<div class="px-6 py-2 rounded-full mb-1">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-blue-500 transition-colors" style='font-variation-settings: "FILL" 0, "wght" 500;'>qr_code_scanner</span>
+</div>
+<span class="text-[10px] font-extrabold tracking-widest text-slate-400 group-hover:text-blue-500 uppercase transition-colors">Scan</span>
+</a>
+<!-- Print -->
+<a class="flex flex-col items-center justify-center gap-1 group" href="#">
+<div class="px-6 py-2 rounded-full mb-1">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-blue-500 transition-colors" style='font-variation-settings: "FILL" 0, "wght" 500;'>print</span>
+</div>
+<span class="text-[10px] font-extrabold tracking-widest text-slate-400 group-hover:text-blue-500 uppercase transition-colors">Print</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center gap-1 group" href="#">
+<div class="px-6 py-2 rounded-full mb-1">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-blue-500 transition-colors" style='font-variation-settings: "FILL" 0, "wght" 500;'>person</span>
+</div>
+<span class="text-[10px] font-extrabold tracking-widest text-slate-400 group-hover:text-blue-500 uppercase transition-colors">Profile</span>
+</a></nav>
+</body></html>

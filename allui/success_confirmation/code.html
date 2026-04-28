@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Success - Smart AI Library System</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-fixed-variant": "#005321",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary-container": "#007e37",
+                        "secondary-container": "#8a4cfc",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed": "#dbe1ff",
+                        "inverse-surface": "#2e3132",
+                        "surface-container": "#edeeef",
+                        "on-primary-container": "#eeefff",
+                        "surface-variant": "#e1e3e4",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "primary-container": "#2563eb",
+                        "outline-variant": "#c3c6d7",
+                        "on-tertiary-container": "#c1ffc5",
+                        "outline": "#737686",
+                        "on-primary-fixed": "#00174b",
+                        "secondary-fixed": "#eaddff",
+                        "on-surface-variant": "#434655",
+                        "on-secondary-fixed": "#25005a",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed": "#002109",
+                        "inverse-primary": "#b4c5ff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e8e9",
+                        "surface": "#f8f9fa",
+                        "on-error": "#ffffff",
+                        "on-background": "#191c1d",
+                        "tertiary": "#006229",
+                        "on-secondary-container": "#fffbff",
+                        "tertiary-fixed": "#6bff8f",
+                        "secondary": "#712ae2",
+                        "background": "#f8f9fa",
+                        "tertiary-fixed-dim": "#4ae176",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-surface": "#191c1d",
+                        "primary": "#004ac6",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "surface-tint": "#0053db",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #8a4cfc 100%);
+        }
+        .success-ripple {
+            position: relative;
+        }
+        .success-ripple::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: #22C55E;
+            opacity: 0.1;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col items-center">
+<!-- TopAppBar -->
+<header class="bg-white/70 dark:bg-slate-950/70 backdrop-blur-lg docked full-width top-0 z-50 shadow-sm dark:shadow-none flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400" data-icon="close">close</span>
+</button>
+<h1 class="text-blue-600 dark:text-blue-400 font-manrope font-semibold tracking-tight">Success</h1>
+</div>
+<div class="text-blue-600 dark:text-blue-400 font-bold">ATHENEUM</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center w-full max-w-lg px-6 py-12 md:py-24">
+<!-- Animated Success Anchor -->
+<div class="mb-10 success-ripple">
+<div class="w-32 h-32 bg-green-50 dark:bg-green-900/10 rounded-full flex items-center justify-center relative overflow-hidden">
+<!-- Abstract "Confetti" Shapes -->
+<div class="absolute w-2 h-2 bg-green-400 rounded-full top-4 left-8 opacity-40"></div>
+<div class="absolute w-3 h-3 bg-blue-400 rounded-full bottom-6 right-10 opacity-30"></div>
+<div class="absolute w-1.5 h-1.5 bg-purple-400 rounded-full top-10 right-4 opacity-40"></div>
+<span class="material-symbols-outlined text-7xl text-[#22C55E]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Headline & Subtext -->
+<div class="text-center space-y-3 mb-10">
+<h2 class="text-3xl md:text-4xl font-headline font-bold text-on-background tracking-tight">
+                Books Returned Successfully
+            </h2>
+<p class="text-on-surface-variant text-lg">
+                You have returned 3 books. Total fine: ৳80
+            </p>
+</div>
+<!-- Summary Card (Editorial Style) -->
+<div class="w-full bg-surface-container-lowest rounded-3xl p-8 mb-10 shadow-[0_20px_40px_rgba(0,0,0,0.04)] relative overflow-hidden">
+<!-- Glass Decorative Accent -->
+<div class="absolute -right-8 -top-8 w-24 h-24 bg-primary-container/5 rounded-full blur-2xl"></div>
+<div class="space-y-6 relative z-10">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-medium">Books processed</span>
+<span class="text-on-surface font-semibold">3</span>
+</div>
+<!-- Invisible spacing divider via background shift as per DS -->
+<div class="h-px bg-surface-container-low w-full"></div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-medium">Amount paid</span>
+<span class="text-on-surface font-semibold">৳80</span>
+</div>
+<div class="h-px bg-surface-container-low w-full"></div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-medium">Date</span>
+<span class="text-on-surface font-semibold">Oct 25, 2023</span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="w-full flex flex-col gap-4">
+<button class="w-full h-14 rounded-2xl bg-gradient-primary text-white font-semibold text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/20">
+                Back to Home
+            </button>
+<button class="w-full h-14 rounded-2xl bg-surface-container-high text-on-surface font-semibold text-lg hover:bg-surface-container-highest transition-colors active:scale-95">
+                View Receipt
+            </button>
+</div>
+<!-- Recommendation/Next Steps Bento Partial -->
+<div class="mt-12 w-full grid grid-cols-1 gap-4">
+<div class="bg-surface-container-low rounded-3xl p-6 flex items-center gap-6">
+<div class="w-16 h-20 bg-surface-container-highest rounded-xl flex-shrink-0 overflow-hidden shadow-sm">
+<img alt="book cover" class="w-full h-full object-cover" data-alt="Close up of a classic book cover with gold foil typography on a deep emerald green linen background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDRwd8SDa2QRyeDrETaH9FomZ7sfkdlxDowX_j2mH6sDLyFNetnD4K85EqHUvohRCFFmvfTA7Oe2gveiA0WxKPf_BDDdFZGgYvvn2Ibq5vT7SjCEmendmhUGYPpHCoEashYcNiHkDP-n6scWceabAiw5antYSk-Rd7iM0Xy_2seOPzL-5qdEpQJUYfO31433lpgnwREWsi-dP46ynrNd50hOdN74owfHkUmI8TZWImUGYD-iRIFwhTqPjrqemPcHt465ZJZqBic0"/>
+</div>
+<div class="flex-grow">
+<div class="text-xs font-label text-tertiary-container font-bold mb-1 uppercase tracking-wider">Recommended for you</div>
+<h4 class="text-on-surface font-bold text-lg leading-tight">The Art of Innovation</h4>
+<p class="text-on-surface-variant text-sm mt-1">Available at Wing C, Floor 2</p>
+</div>
+<span class="material-symbols-outlined text-primary-container" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Suppressed for focused Transactional screen as per instructions) -->
+<!-- Navigation Shell Suppressed: The screen is a Success/Confirmation focused journey -->
+</body></html>

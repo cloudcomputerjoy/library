@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dynamic QR - The Atheneum</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#5a00c6",
+                    "surface-bright": "#f8f9fa",
+                    "inverse-primary": "#b4c5ff",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005321",
+                    "outline-variant": "#c3c6d7",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-dim": "#d9dadb",
+                    "secondary-fixed": "#eaddff",
+                    "tertiary-fixed": "#6bff8f",
+                    "secondary-container": "#8a4cfc",
+                    "inverse-surface": "#2e3132",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#434655",
+                    "surface-container": "#edeeef",
+                    "surface": "#f8f9fa",
+                    "tertiary-container": "#007e37",
+                    "on-primary-fixed": "#00174b",
+                    "secondary": "#712ae2",
+                    "surface-container-high": "#e7e8e9",
+                    "background": "#f8f9fa",
+                    "on-tertiary-container": "#c1ffc5",
+                    "surface-container-highest": "#e1e3e4",
+                    "primary": "#004ac6",
+                    "primary-container": "#2563eb",
+                    "primary-fixed": "#dbe1ff",
+                    "on-primary-container": "#eeefff",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#d2bbff",
+                    "tertiary": "#006229",
+                    "surface-variant": "#e1e3e4",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-secondary-fixed": "#25005a",
+                    "on-surface": "#191c1d",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "outline": "#737686",
+                    "tertiary-fixed-dim": "#4ae176",
+                    "on-tertiary-fixed": "#002109",
+                    "on-background": "#191c1d",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-secondary-container": "#fffbff",
+                    "surface-tint": "#0053db"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .qr-glow {
+            box-shadow: 0 0 50px 0 rgba(37, 99, 235, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.04)] flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Close-up studio portrait of a professional man with a friendly expression, soft lighting, clean blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZgo4avnt1Bd7Jo1qbJA2C8jHKK-OohL-AsFBWyl8CLfEMcVPARCkdH8RVFptD_UzTIX0sXvWeEWRI9816aSnQoaBl91LUvCTiI7PXXXydTWkrtj4VwK4xsm5700Xi_dgYH92F4hGhXKAYuB2WGThAU-efP9JeF3kSXJf4VVYB2hjdeMSf7KdgIknmMpM2ESi83YeKhkObwikwPfv9PyBAX1jvhdtjxcBJC4jst9F_9abMqprtxzXrFLIZkma9StJmETA51V5K9qw"/>
+</div>
+<span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600 font-headline tracking-tight">The Atheneum</span>
+</div>
+<button class="text-blue-600 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="pt-24 pb-32 px-6 flex flex-col items-center max-w-lg mx-auto">
+<!-- AI Insight Banner -->
+<div class="w-full mb-8 flex items-center justify-between p-4 bg-secondary-fixed rounded-2xl shadow-sm">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-white/50 backdrop-blur-md rounded-xl">
+<span class="material-symbols-outlined text-secondary" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<p class="text-[11px] font-bold text-on-secondary-fixed-variant uppercase tracking-widest font-label">Identity Verified</p>
+<p class="text-sm font-medium text-on-secondary-fixed">Secure Session Active</p>
+</div>
+</div>
+<div class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></div>
+</div>
+<!-- Dynamic QR Section -->
+<div class="relative w-full aspect-square max-w-[320px] mb-10 group">
+<!-- Background Decorative Orbits -->
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-secondary/10 rounded-[48px] blur-3xl opacity-50 -z-10 group-hover:scale-110 transition-transform duration-700"></div>
+<!-- QR Container -->
+<div class="w-full h-full bg-surface-container-lowest rounded-[40px] p-8 flex flex-col items-center justify-center qr-glow relative overflow-hidden">
+<!-- Soft Glow Overlay -->
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/5 via-transparent to-secondary-container/5 pointer-events-none"></div>
+<div class="w-full aspect-square relative z-10 flex items-center justify-center">
+<img alt="Dynamic Access QR Code" class="w-full h-full object-contain opacity-90" data-alt="A clean, minimalist high-resolution QR code centered on a white background with subtle digital artifacts and soft blue light rays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAFMS0btk9RHAMbuTx3uhX1jbonscyhEWeSwzSvDHbi3g2yX0Y6c-7u6IlFcYZ5Tg0cIhengkR2-SM6nzvniQEfPy1YgrHTrORv3s6fxMT8IG_kQjjsmHy5NEczHQ9WSQfBonOVuSvBzF2_Gb7hu5qaUPWg0ITVVNSxaCRYUrEyLYDi596keJsKEqaauMoqqJFxoblwD72yApNI7fsTnicoQwXCsharVqCx6tF8l2pViviPbeQ4Xwv91GRb8CRyuc4Sx0-xJqN2Ag"/>
+</div>
+</div>
+<!-- Countdown Indicator -->
+<div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-xl border-outline-variant/10 border px-6 py-2 rounded-full shadow-lg flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="update">update</span>
+<span class="text-sm font-semibold text-on-surface font-label">Refreshes in 12s</span>
+</div>
+</div>
+<!-- User Information Card -->
+<div class="w-full bg-surface-container-low rounded-3xl p-6 mb-6">
+<div class="flex items-center gap-4 mb-6">
+<div class="h-14 w-14 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white shadow-lg">
+<span class="material-symbols-outlined text-3xl" data-icon="person_pin">person_pin</span>
+</div>
+<div>
+<h3 class="text-xl font-bold font-headline text-on-surface">Julian Sterling</h3>
+<p class="text-on-surface-variant text-sm">Postgraduate Fellow · Research Wing</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-lowest rounded-2xl">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider mb-1 font-label">Access Level</p>
+<p class="font-bold text-primary">Level 4 Scholar</p>
+</div>
+<div class="p-4 bg-surface-container-lowest rounded-2xl">
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider mb-1 font-label">Terminal ID</p>
+<p class="font-bold text-on-surface">ATH-092-B</p>
+</div>
+</div>
+</div>
+<!-- Action Grid -->
+<div class="grid grid-cols-2 gap-4 w-full">
+<button class="flex items-center justify-center gap-2 p-4 bg-surface-container-high text-on-surface font-semibold rounded-2xl hover:bg-surface-container-highest transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-xl" data-icon="content_copy">content_copy</span>
+<span class="text-sm">Copy ID</span>
+</button>
+<button class="flex items-center justify-center gap-2 p-4 bg-surface-container-high text-on-surface font-semibold rounded-2xl hover:bg-surface-container-highest transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-xl" data-icon="share">share</span>
+<span class="text-sm">Share Access</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-white/70 backdrop-blur-xl rounded-t-[32px] shadow-[0_-10px_40px_rgba(0,0,0,0.04)] z-50"><a class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">menu_book</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">search</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-50 text-blue-600 rounded-2xl px-4 py-2 shadow-sm" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">print</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase">Print</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-4 py-2 hover:bg-slate-50 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase">Profile</span>
+</a></nav>
+</body></html>

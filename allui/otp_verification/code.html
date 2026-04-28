@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verify Identity - Intelligent Atheneum</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#b4c5ff",
+                    "surface-tint": "#0053db",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary-fixed-variant": "#5a00c6",
+                    "on-background": "#191c1d",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-tertiary-fixed-variant": "#005321",
+                    "surface": "#f8f9fa",
+                    "secondary-container": "#8a4cfc",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container": "#edeeef",
+                    "tertiary-container": "#007e37",
+                    "secondary": "#712ae2",
+                    "primary-fixed": "#dbe1ff",
+                    "inverse-surface": "#2e3132",
+                    "on-secondary-fixed": "#25005a",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f8f9fa",
+                    "on-tertiary-fixed": "#002109",
+                    "on-secondary-container": "#fffbff",
+                    "on-primary-container": "#eeefff",
+                    "tertiary": "#006229",
+                    "on-surface-variant": "#434655",
+                    "secondary-fixed": "#eaddff",
+                    "primary-container": "#2563eb",
+                    "tertiary-fixed-dim": "#4ae176",
+                    "on-surface": "#191c1d",
+                    "on-primary-fixed": "#00174b",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#c1ffc5",
+                    "on-error": "#ffffff",
+                    "outline": "#737686",
+                    "background": "#f8f9fa",
+                    "tertiary-fixed": "#6bff8f",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#c3c6d7",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "secondary-fixed-dim": "#d2bbff",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e1e3e4",
+                    "surface-container-high": "#e7e8e9",
+                    "primary": "#004ac6",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f0f1f2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "xxl": "1.5rem",
+                    "xxxl": "2rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar Navigation Shell -->
+<!-- Suppressing main nav for focus; using the provided TopAppBar for 'Verify Identity' flow -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur-xl flex items-center justify-between px-6 h-16 w-full">
+<button class="text-blue-600 dark:text-blue-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-all p-2 rounded-full scale-95 active:opacity-80 transition-transform">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-manrope font-semibold text-lg text-on-surface">Verify Identity</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<main class="flex-grow flex items-center justify-center px-6 pt-20 pb-12 relative overflow-hidden">
+<!-- Decorative Background Elements (Lumina Campus Aesthetics) -->
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary-container/10 blur-[120px]"></div>
+<div class="absolute bottom-[-5%] right-[-5%] w-[35%] h-[35%] rounded-full bg-secondary-container/10 blur-[100px]"></div>
+<div class="max-w-md w-full relative z-10">
+<!-- Glassmorphism Container -->
+<div class="glass-card rounded-xxxl p-8 md:p-10 shadow-[0_20px_40px_rgba(0,0,0,0.04)] border border-white/40">
+<!-- Branding/Icon Section -->
+<div class="flex flex-col items-center text-center mb-10">
+<div class="w-20 h-20 bg-gradient-to-tr from-primary-container to-secondary-container rounded-xxl flex items-center justify-center mb-6 shadow-lg shadow-primary-container/20">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+</div>
+<h2 class="font-headline font-extrabold text-3xl text-on-surface mb-3 tracking-tight">Enter One-Time Password</h2>
+<p class="text-on-surface-variant text-base leading-relaxed max-w-[280px]">
+                        Enter the 6-digit code sent to your academic email.
+                    </p>
+</div>
+<!-- OTP Input Grid -->
+<form action="#" class="space-y-10">
+<div class="grid grid-cols-6 gap-3 md:gap-4">
+<!-- Single Digit Boxes -->
+<input class="w-full aspect-square text-center font-headline font-bold text-2xl bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200 outline-none" maxlength="1" type="text" value="8"/>
+<input class="w-full aspect-square text-center font-headline font-bold text-2xl bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200 outline-none" maxlength="1" type="text" value="3"/>
+<input class="w-full aspect-square text-center font-headline font-bold text-2xl bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200 outline-none" maxlength="1" placeholder="·" type="text"/>
+<input class="w-full aspect-square text-center font-headline font-bold text-2xl bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200 outline-none" maxlength="1" placeholder="·" type="text"/>
+<input class="w-full aspect-square text-center font-headline font-bold text-2xl bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200 outline-none" maxlength="1" placeholder="·" type="text"/>
+<input class="w-full aspect-square text-center font-headline font-bold text-2xl bg-surface-container-highest border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200 outline-none" maxlength="1" placeholder="·" type="text"/>
+</div>
+<div class="text-center">
+<button class="text-primary font-semibold text-sm hover:underline underline-offset-4 decoration-primary/30 transition-all" type="button">
+                            Resend OTP
+                        </button>
+</div>
+<!-- Action Button -->
+<button class="w-full h-14 bg-gradient-to-r from-primary-container to-secondary-container text-white font-headline font-bold text-lg rounded-xxl shadow-xl shadow-primary-container/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2" type="submit">
+                        Verify OTP
+                        <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Footer Meta -->
+<div class="mt-8 text-center px-4">
+<p class="text-on-surface-variant text-sm">
+                    Having trouble? Contact the <a class="text-primary font-medium" href="#">Lumina Campus Support</a> for assistance.
+                </p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Suppressed due to Transactional State ("Linear/Transactional Rule") -->
+<!-- Decorative Image Card (Subtle hint of library environment) -->
+<div class="hidden lg:block fixed right-12 bottom-12 w-64 h-80 rounded-xxxl overflow-hidden shadow-2xl rotate-3 opacity-60 hover:rotate-0 transition-transform duration-700">
+<img alt="Modern minimalist library" class="w-full h-full object-cover" data-alt="Interior of a modern academic library with high ceilings, soft natural light through large windows, and minimalist wooden study desks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5jW-zsFetW5x3prgLedhqM4i3x7WxZibrM6MhCRH-IYOZoFirgTQGA_F5s7Jq4CvUOgPJ_35qViB7aVPyYxdevksaIgMyC46cn4fPAxFzoaDz6x6VOvBS9sr0Wk-AsfAiO81Q_tHQVP9xJde-vEUBRzwNZ5ZgGQSXOwPDhZLufeaB3IUz14YRL_qwcNt2siplPEstpeCAV2PjAs4rMYsAi8lzxJpuekiyGCk37lGEvqpftSVkcOJshkKd8f-sFlcR_h-sqnFgw4w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</body></html>

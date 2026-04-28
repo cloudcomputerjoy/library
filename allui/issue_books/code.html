@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Issue Books - The Intelligent Atheneum</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "surface-container-highest": "#e1e3e4",
+                        "outline-variant": "#c3c6d7",
+                        "on-tertiary-container": "#c1ffc5",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#eaddff",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "inverse-primary": "#b4c5ff",
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed-dim": "#4ae176",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#712ae2",
+                        "on-surface": "#191c1d",
+                        "on-tertiary-fixed-variant": "#005321",
+                        "on-primary-fixed": "#00174b",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#006229",
+                        "surface-dim": "#d9dadb",
+                        "surface-container": "#edeeef",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#eeefff",
+                        "tertiary-fixed": "#6bff8f",
+                        "on-tertiary-fixed": "#002109",
+                        "surface-container-high": "#e7e8e9",
+                        "on-secondary-fixed": "#25005a",
+                        "surface-variant": "#e1e3e4",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-tint": "#0053db",
+                        "outline": "#737686",
+                        "on-background": "#191c1d",
+                        "tertiary-container": "#007e37",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-error": "#ffffff",
+                        "primary": "#004ac6",
+                        "primary-container": "#2563eb",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "surface-bright": "#f8f9fa",
+                        "on-surface-variant": "#434655",
+                        "secondary-container": "#8a4cfc",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface antialiased min-h-screen pb-40">
+<!-- Top AppBar (from JSON guidance) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center px-6 h-16 bg-gray-50/70 dark:bg-gray-900/70 backdrop-blur-xl shadow-sm shadow-blue-500/5">
+<div class="flex items-center gap-4 w-full">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-blue-600">arrow_back</span>
+</button>
+<div class="flex flex-col">
+<h1 class="font-['Manrope'] font-semibold text-lg tracking-tight text-blue-600">Issue Books</h1>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-md mx-auto space-y-8">
+<!-- Welcome/Subtitle Section -->
+<section>
+<h2 class="font-headline font-extrabold text-3xl tracking-tight text-on-surface">Select multiple books to issue</h2>
+<p class="text-on-surface-variant mt-2 font-medium opacity-80">Curate your collection for the upcoming week.</p>
+</section>
+<!-- Search & Scan Section -->
+<section class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<input class="w-full h-14 pl-12 pr-14 bg-surface-container-highest border-none rounded-2xl focus:ring-2 focus:ring-primary/20 transition-all font-medium text-on-surface placeholder:text-on-surface-variant/50" placeholder="Search or scan book..." type="text"/>
+<div class="absolute inset-y-0 right-3 flex items-center">
+<button class="w-10 h-10 flex items-center justify-center bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all active:scale-95">
+<span class="material-symbols-outlined text-primary">qr_code_scanner</span>
+</button>
+</div>
+</section>
+<!-- Selected Books List -->
+<section class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<span class="font-headline font-bold text-sm tracking-widest text-on-surface-variant uppercase">Selected Inventory</span>
+<span class="text-xs font-bold text-primary px-3 py-1 bg-primary/10 rounded-full">2 Items</span>
+</div>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-3xl p-4 flex gap-4 shadow-[0_20px_40px_rgba(0,0,0,0.04)] hover:shadow-lg transition-shadow relative overflow-hidden group">
+<div class="w-20 h-28 flex-shrink-0 bg-surface-container-high rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern minimalist book cover titled Clean Code with geometric green shapes and crisp white typography on a clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnMzqXa7pOdVhdI4UiPMes95uvre4ybQdo-lqM2kXw3D3C7R7Llfz5yS-62gm62Dk2FdSGYWSJM7jhJUQB-GMN7fnKTl_RN_rjx4WqNjEf4klYZ_EcUnfKEmRD4oPFlFJbtw6X72mspLwM6oMdPHc3lmvJDjfrJHfS8YcEXWrtuuLkVN6VLl3aoogLdfxgIkkxH03PmW2QOxWKTpVoXVf2OOEOwdyos2FVeTlR1FuXwiZv9zgSed9mBKoWr2slPbj85e7Usz175uE"/>
+</div>
+<div class="flex flex-col justify-between py-1 flex-1">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-bold text-on-surface leading-tight">Clean Code</h3>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-error-container/20 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] hover:text-error transition-colors">close</span>
+</button>
+</div>
+<p class="text-sm text-on-surface-variant">Robert C. Martin</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="text-xs font-bold text-tertiary uppercase tracking-wider">Available</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-3xl p-4 flex gap-4 shadow-[0_20px_40px_rgba(0,0,0,0.04)] hover:shadow-lg transition-shadow relative overflow-hidden group">
+<div class="w-20 h-28 flex-shrink-0 bg-surface-container-high rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Abstract design book cover for Design Patterns featuring architectural blue patterns and high-contrast professional layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHh5iTCUdOGfSrkt9QcfFCyVsy3szrdeoUw6jUVNrNKisFsJL2nEpXEUtVnZh6WkV3Ylx9axbs3oLGq0uiS0_S1UAtrozWTetjU8ePpm9Hc0-2CI9CQHGO9fAo4MHI4xFhr4PK34h_qhGxIx0hF0UUS9WQllcgf6ReNkhE7QBbfYReVIvijxKUuU62m_Y_4KEHgWWqynxDcihYwWdXCoypZUH62cZ2iuQPCngYibUNlBuU3UAccVdOt9nkwiIrs6Vj83J8f52kLEY"/>
+</div>
+<div class="flex flex-col justify-between py-1 flex-1">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline font-bold text-on-surface leading-tight">Design Patterns</h3>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-error-container/20 group-hover:opacity-100 transition-all">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] hover:text-error transition-colors">close</span>
+</button>
+</div>
+<p class="text-sm text-on-surface-variant">Gang of Four</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="text-xs font-bold text-tertiary uppercase tracking-wider">Available</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Summary & Policy Card -->
+<section class="bg-surface-container-low rounded-[2rem] p-6 space-y-4">
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-medium">Total Books</span>
+<span class="text-on-surface font-bold">2</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant font-medium">Due Date</span>
+<span class="text-primary font-bold">Nov 07, 2023</span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/20">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error mt-0.5" style="font-variation-settings: 'opsz' 20">info</span>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-1">Fine Policy</p>
+<p class="text-sm text-on-surface-variant leading-relaxed">৳10/day after due date. Return promptly to avoid academic holds.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Verification Section -->
+<section class="flex flex-col items-center py-4 space-y-4">
+<div class="w-20 h-20 rounded-3xl bg-secondary-container/10 flex items-center justify-center group cursor-pointer active:scale-95 transition-transform duration-300">
+<div class="w-14 h-14 rounded-2xl bg-secondary-container flex items-center justify-center shadow-lg shadow-secondary/20">
+<span class="material-symbols-outlined text-on-primary text-[32px]">fingerprint</span>
+</div>
+</div>
+<div class="text-center">
+<p class="text-sm font-semibold text-on-surface">Verify identity to issue books</p>
+<p class="text-xs text-on-surface-variant mt-1">Biometric verification required</p>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom CTA -->
+<div class="fixed bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background via-background/95 to-transparent z-40">
+<button class="w-full h-16 bg-gradient-to-r from-primary-container to-secondary-container rounded-3xl flex items-center justify-center gap-3 shadow-xl shadow-primary/20 active:scale-[0.98] transition-transform duration-200">
+<span class="material-symbols-outlined text-on-primary">task_alt</span>
+<span class="font-headline font-bold text-lg text-on-primary tracking-wide">Issue All Books</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar (from JSON guidance) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-gray-50/70 dark:bg-gray-900/70 backdrop-blur-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.04)] rounded-t-[32px] md:hidden">
+<a class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 px-5 py-2 hover:text-blue-500 transition-all" href="#">
+<span class="material-symbols-outlined">import_contacts</span>
+<span class="font-['Manrope'] font-medium text-[11px] tracking-wide">Catalog</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-600/10 dark:bg-blue-400/10 text-blue-600 dark:text-blue-400 rounded-2xl px-5 py-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">book_4</span>
+<span class="font-['Manrope'] font-medium text-[11px] tracking-wide">My Books</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 px-5 py-2 hover:text-blue-500 transition-all" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-['Manrope'] font-medium text-[11px] tracking-wide">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400 px-5 py-2 hover:text-blue-500 transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] font-medium text-[11px] tracking-wide">Profile</span>
+</a>
+</nav>
+</body></html>

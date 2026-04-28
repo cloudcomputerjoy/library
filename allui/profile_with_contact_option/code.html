@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile &amp; Settings | The Atheneum</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c3c6d7",
+                    "surface-variant": "#e1e3e4",
+                    "surface-bright": "#f8f9fa",
+                    "on-tertiary-fixed": "#002109",
+                    "on-secondary-fixed-variant": "#5a00c6",
+                    "on-surface-variant": "#434655",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#d2bbff",
+                    "on-tertiary-container": "#c1ffc5",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#712ae2",
+                    "tertiary-container": "#007e37",
+                    "on-background": "#191c1d",
+                    "inverse-surface": "#2e3132",
+                    "secondary-container": "#8a4cfc",
+                    "on-primary-container": "#eeefff",
+                    "surface-container-low": "#f3f4f5",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#0053db",
+                    "on-primary-fixed": "#00174b",
+                    "tertiary-fixed-dim": "#4ae176",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005321",
+                    "tertiary-fixed": "#6bff8f",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#e7e8e9",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#737686",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary-fixed": "#25005a",
+                    "tertiary": "#006229",
+                    "inverse-primary": "#b4c5ff",
+                    "secondary-fixed": "#eaddff",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "primary-fixed": "#dbe1ff",
+                    "surface-container": "#edeeef",
+                    "primary-container": "#2563eb",
+                    "background": "#f8f9fa",
+                    "surface": "#f8f9fa",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-surface": "#191c1d",
+                    "on-secondary-container": "#fffbff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "primary": "#004ac6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased pb-24">
+<!-- TopAppBar -->
+<header class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0_20px_40px_rgba(0,0,0,0.04)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-5xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="close up professional portrait of a scholarly man with glasses in a library setting, soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0VO7I7hUJapmlNfunKtSiO0FNA-Jn2l3b34r3TNNBUyiGN33jYAdQdHAbI2zIWYNVOb8WzVM7PnLsP5wwBqvw2Dg9pIKW5vBBp05Ur_SPgUKMM42kq0zQ2bSKpDNp8XXA56IqEYcGQN0ly68sJ2J8FuQe9ISi0oqefyCh25Sun2qjzjvwcCPE4dDwiR7zb4_I02Q0J_Y_iDv0_0J1r_eyO_GwJ3XiB7QckS3ENcwz2l6MFbOXWGZQszegYuJFOfHLF6IVnmYqr_c" style=""/>
+</div>
+<h1 class="font-['Manrope'] font-bold tracking-tight text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600" style="">The Atheneum</h1>
+</div>
+<button class="text-slate-500 dark:text-slate-400 hover:opacity-80 transition-opacity" style="">
+<span class="material-symbols-outlined" data-icon="notifications" style="">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-lg mx-auto space-y-8">
+<!-- User Identity Card -->
+<section class="relative group">
+<div class="bg-gradient-to-br from-primary-container to-secondary-container p-8 rounded-3xl shadow-[0_24px_48px_rgba(37,99,235,0.15)] text-white overflow-hidden relative">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-white/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700"></div>
+<div class="relative z-10 flex flex-col gap-6">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<span class="text-xs font-semibold tracking-widest uppercase opacity-70" style="">Scholarly Identity</span>
+<h2 class="font-headline text-3xl font-extrabold tracking-tight" style="">Julian Thorne</h2>
+<p class="text-blue-100/80 font-medium" style="">Senior Research Fellow</p>
+</div>
+<div class="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-md p-1.5 border border-white/30">
+<img alt="QR ID" class="w-full h-full invert opacity-90" data-alt="minimalist white qr code on a dark background representing digital identity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9jlBPe1KO6E53UD25OnHOJiV4Ux15ppNHsavYc5eBIYM7_EhZmSHxbXE65cj6tzgRznIMc0jdmCuUDCXJlbItlPzksi6G10p-ULcoN5QTKSchvf0nxIfmWpK1kOM3wkW6EXtMB_4XzPQPpcmp5YEx1lfmcMMzg2sw8eu3kH-L8BJYSxrAxmQh1sphDO_VP_M9Ogl8kwHjkH1S6MVHYGfP9GY7lSOwP2851Ydjfa0QC9pMcWKqeqSzjJq3F5GF6IsZKKXzzrA14kk" style=""/>
+</div>
+</div>
+<div class="flex gap-4 pt-4 border-t border-white/10">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase opacity-60 font-bold" style="">Access Level</span>
+<span class="text-sm font-semibold" style="">Tier 1 • Archives</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase opacity-60 font-bold" style="">Member Since</span>
+<span class="text-sm font-semibold" style="">Sept 2021</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Digital ID Mini Preview -->
+<section class="space-y-4">
+<div class="flex justify-between items-end px-2">
+<h3 class="font-headline font-semibold text-lg text-on-surface" style="">Insights</h3>
+</div>
+<div class="bg-surface-container-low p-5 rounded-3xl flex items-center gap-4 group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="w-12 h-12 bg-primary-container/10 rounded-2xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="local_library" style="">local_library</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-on-surface" style="">Borrowed History</h4>
+<p class="text-xs text-on-surface-variant" style="">View your complete borrowing records</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right" style="">chevron_right</span>
+</div>
+</section>
+<!-- Toggles Section -->
+<section class="space-y-4">
+<h3 class="font-headline font-semibold text-lg text-on-surface px-2" style="">Preferences</h3>
+<div class="bg-surface-container-lowest rounded-3xl p-2 space-y-1 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<!-- Toggle Item: Dark Mode -->
+<div class="flex items-center justify-between p-4 rounded-2xl hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600">
+<span class="material-symbols-outlined" data-icon="dark_mode" style="">dark_mode</span>
+</div>
+<span class="font-medium" style="">Dark Mode</span>
+</div>
+<button class="w-12 h-6 bg-surface-container-highest rounded-full relative p-1 transition-colors" style="">
+<div class="w-4 h-4 bg-white rounded-full shadow-sm translate-x-0 transition-transform"></div>
+</button>
+</div>
+<!-- Toggle Item: Notifications -->
+<div class="flex items-center justify-between p-4 rounded-2xl hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined" data-icon="notifications_active" style="">notifications_active</span>
+</div>
+<span class="font-medium" style="">Notifications</span>
+</div>
+<button class="w-12 h-6 bg-primary-container rounded-full relative p-1 transition-colors" style="">
+<div class="w-4 h-4 bg-white rounded-full shadow-sm translate-x-6 transition-transform"></div>
+</button>
+</div>
+</div>
+</section>
+<!-- Navigation List -->
+<section class="space-y-4">
+<h3 class="font-headline font-semibold text-lg text-on-surface px-2" style="">Account &amp; Privacy</h3>
+<div class="bg-surface-container-lowest rounded-3xl p-2 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<a class="flex items-center justify-between p-4 rounded-2xl hover:bg-surface-container-low transition-colors group" href="#" style="">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-violet-50 flex items-center justify-center text-violet-600">
+<span class="material-symbols-outlined" data-icon="shield_person" style="">shield_person</span>
+</div>
+<span class="font-medium" style="">Personal Information</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="arrow_forward_ios" style="font-size: 16px;">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between p-4 rounded-2xl hover:bg-surface-container-low transition-colors group" href="#" style="">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined" data-icon="lock" style="">lock</span>
+</div>
+<span class="font-medium" style="">Security &amp; Password</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="arrow_forward_ios" style="font-size: 16px;">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between p-4 rounded-2xl hover:bg-surface-container-low transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</div>
+<span class="font-medium">Help &amp; Support</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="arrow_forward_ios" style="font-size: 16px;">arrow_forward_ios</span>
+</a><a class="flex items-center justify-between p-4 rounded-2xl hover:bg-surface-container-low transition-colors group text-error" href="#" style="">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-error-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="logout" style="">logout</span>
+</div>
+<span class="font-medium" style="">Sign Out</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Footer Version Info -->
+<footer class="py-8 text-center">
+<p class="text-[10px] font-medium tracking-widest text-on-surface-variant opacity-50 uppercase" style="">Atheneum OS • v2.4.0-stable</p>
+</footer>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-between items-center px-6 pb-8 pt-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl z-50 rounded-t-[40px] shadow-[0_-12px_48px_rgba(0,0,0,0.06)] border-t border-white/20"><!-- Nav Item: Library -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-2 transition-all hover:opacity-80" href="#" style="">
+<span class="material-symbols-outlined mb-1" style='font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;'>local_library</span>
+<span class="text-[10px] font-bold tracking-wider uppercase" style="">Library</span>
+</a>
+<!-- Nav Item: Search -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-2 transition-all hover:opacity-80" href="#" style="">
+<span class="material-symbols-outlined mb-1" style='font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;'>search</span>
+<span class="text-[10px] font-bold tracking-wider uppercase" style="">Search</span>
+</a>
+<!-- Nav Item: Scan -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-2 transition-all hover:opacity-80" href="#" style="">
+<span class="material-symbols-outlined mb-1" style='font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;'>qr_code_scanner</span>
+<span class="text-[10px] font-bold tracking-wider uppercase" style="">Scan</span>
+</a>
+<!-- Nav Item: Print -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-2 transition-all hover:opacity-80" href="#" style="">
+<span class="material-symbols-outlined mb-1" style='font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;'>print</span>
+<span class="text-[10px] font-bold tracking-wider uppercase" style="">Print</span>
+</a>
+<!-- Nav Item: Profile (Active) -->
+<a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-3xl px-6 py-2 transition-all" href="#" style="">
+<span class="material-symbols-outlined mb-1" style='font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;'>person</span>
+<span class="text-[10px] font-bold tracking-wider uppercase" style="">Profile</span>
+</a></nav>
+</body></html>

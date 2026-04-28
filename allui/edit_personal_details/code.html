@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f0f1f2",
+                        "secondary": "#712ae2",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#b4c5ff",
+                        "on-background": "#191c1d",
+                        "on-surface-variant": "#434655",
+                        "tertiary-fixed": "#6bff8f",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "surface-tint": "#0053db",
+                        "surface-container": "#edeeef",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "on-primary-container": "#eeefff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f4f5",
+                        "surface": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "outline-variant": "#c3c6d7",
+                        "surface-variant": "#e1e3e4",
+                        "on-tertiary-fixed": "#002109",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "secondary-container": "#8a4cfc",
+                        "secondary-fixed": "#eaddff",
+                        "primary-container": "#2563eb",
+                        "on-secondary-fixed": "#25005a",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "primary": "#004ac6",
+                        "tertiary-fixed-dim": "#4ae176",
+                        "tertiary-container": "#007e37",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-container": "#fffbff",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "primary-fixed": "#dbe1ff",
+                        "outline": "#737686",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#c1ffc5",
+                        "on-tertiary-fixed-variant": "#005321",
+                        "background": "#f8f9fa",
+                        "tertiary": "#006229",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-high": "#e7e8e9",
+                        "on-surface": "#191c1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "16px",
+                        "xl": "24px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(248, 249, 250, 0.8);
+            backdrop-filter: blur(16px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #8a4cfc 100%);
+        }
+        .cloud-shadow {
+            box-shadow: 0 20px 40px rgba(25, 28, 29, 0.04);
+        }
+        [data-tab-content] {
+            display: none;
+        }
+        [data-tab-content].active {
+            display: block;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-surface overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center bg-surface/80 backdrop-blur-lg px-4 py-4 gap-4">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline text-xl font-bold tracking-tight text-on-surface">Edit Profile</h1>
+</header>
+<main class="flex-1 px-6 py-4">
+<!-- Profile Picture Section -->
+<div class="flex flex-col items-center gap-6 mb-8">
+<div class="relative group">
+<div class="size-32 rounded-full overflow-hidden ring-4 ring-surface-container-low cloud-shadow">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Professional studio portrait of a scholar with a friendly expression, soft natural lighting, minimalist academic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh1XoaYHC_9B5IDibuVeSvBlSGjdk10JVPKa9eJS31br7SX0cDF1X9eLvSSyBz-ZmGY-AFQdMee3AgYPc5aog_jQkV5YEKFyBibbr7--GgBqWhWo8DhQ1_p4PvjNmfWSfEUZBY2qq1tvalXf-_-ZyHH8yvvP0kXa_UBvJ05MBJushyjoCNqqkTaUGS457jDV170d0aOKfY5oJ811o4A-A2kRGKRwm1CgzbxBzg24s692OsA1VtR1OieKBbbd1TG748UyFjZfj2qNQ"/>
+</div>
+<button class="absolute bottom-0 right-0 size-10 primary-gradient rounded-full flex items-center justify-center text-on-primary shadow-lg border-4 border-surface group-active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]" data-icon="edit">edit</span>
+</button>
+</div>
+<div class="text-center">
+<h2 class="font-headline text-2xl font-bold text-on-surface">Julian Thorne</h2>
+<p class="text-on-surface-variant text-sm font-medium">Research ID: TH-9921-X</p>
+</div>
+</div>
+<!-- Tab Switching System -->
+<div class="flex border-b border-outline-variant mb-6">
+<button class="flex-1 py-3 text-sm font-bold border-b-2 border-primary text-primary transition-all" id="tab-personal" onclick="switchTab('personal')">
+                    PERSONAL
+                </button>
+<button class="flex-1 py-3 text-sm font-bold border-b-2 border-transparent text-on-surface-variant transition-all" id="tab-academic" onclick="switchTab('academic')">
+                    ACADEMIC
+                </button>
+</div>
+<!-- Form Section -->
+<form id="profile-form">
+<!-- Personal Tab Content -->
+<div class="active space-y-6" data-tab-content="" id="content-personal">
+<!-- Full Name -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant px-1">Full Name</label>
+<input class="w-full h-14 bg-surface-container-low border-none rounded-lg px-4 text-on-surface focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="Enter your full name" type="text" value="Julian Thorne"/>
+</div>
+<!-- Academic Email -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant px-1">Academic Email</label>
+<input class="w-full h-14 bg-surface-container-low border-none rounded-lg px-4 text-on-surface focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="your.email@campus.edu" type="email" value="j.thorne@campus.edu"/>
+</div>
+<!-- Contact Number -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant px-1">Contact Number</label>
+<input class="w-full h-14 bg-surface-container-low border-none rounded-lg px-4 text-on-surface focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="+1 (555) 000-0000" type="tel" value="+1 (555) 012-3456"/>
+</div>
+</div>
+<!-- Academic Tab Content -->
+<div class="space-y-6" data-tab-content="" id="content-academic">
+<!-- Student ID -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant px-1">Student ID</label>
+<input class="w-full h-14 bg-surface-container-low border-none rounded-lg px-4 text-on-surface focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="Enter Student ID" type="text" value="ST-2024-883"/>
+</div>
+<!-- Department -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant px-1">Department</label>
+<input class="w-full h-14 bg-surface-container-low border-none rounded-lg px-4 text-on-surface focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="e.g. Cognitive Science" type="text" value="Cognitive Science"/>
+</div>
+<!-- Semester -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant px-1">Semester</label>
+<input class="w-full h-14 bg-surface-container-low border-none rounded-lg px-4 text-on-surface focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="e.g. 4th" type="text" value="4th"/>
+</div>
+<!-- Session -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant px-1">Session</label>
+<input class="w-full h-14 bg-surface-container-low border-none rounded-lg px-4 text-on-surface focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="e.g. 2023-2024" type="text" value="2023-2024"/>
+</div>
+<!-- Membership Status -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant px-1">Membership Status</label>
+<div class="relative">
+<select class="w-full h-14 bg-surface-container-low border-none rounded-lg px-4 text-on-surface appearance-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all cursor-pointer">
+<option selected="">Senior Research Fellow</option>
+<option>Graduate Student</option>
+<option>Faculty Member</option>
+<option>Visiting Scholar</option>
+</select>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="unfold_more">unfold_more</span>
+</div>
+</div>
+</div>
+</div>
+</form>
+<!-- Action Button -->
+<div class="mt-10 pb-20">
+<button class="w-full h-14 primary-gradient text-on-primary font-bold rounded-lg cloud-shadow active:scale-[0.98] transition-all">
+                    Save Changes
+                </button>
+</div>
+</main>
+<!-- Shared Component: BottomNavBar -->
+<nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md glass-nav border-t border-outline-variant/10 z-50">
+<div class="flex gap-2 bg-transparent px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center" data-icon="BookOpen" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewbox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h64a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64Z"></path>
+</svg>
+</div>
+<p class="text-[10px] font-bold leading-normal tracking-[0.05em]">LIBRARY</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center" data-icon="MagnifyingGlass" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewbox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</div>
+<p class="text-[10px] font-bold leading-normal tracking-[0.05em]">SEARCH</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center" data-icon="Scan" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewbox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,40V80a8,8,0,0,1-16,0V48H176a8,8,0,0,1,0-16h40A8,8,0,0,1,224,40ZM80,208H48V176a8,8,0,0,0-16,0v40a8,8,0,0,0,8,8H80a8,8,0,0,0,0-16Zm136-40a8,8,0,0,0-8,8v32H176a8,8,0,0,0,0,16h40a8,8,0,0,0,8-8V176A8,8,0,0,0,216,168ZM40,88a8,8,0,0,0,8-8V48H80a8,8,0,0,0,0-16H40a8,8,0,0,0-8,8V80A8,8,0,0,0,40,88Zm128,96H88a16,16,0,0,1-16-16V88A16,16,0,0,1,88,72h80a16,16,0,0,1,16,16v80A16,16,0,0,1,168,184ZM88,168h80V88H88Z"></path>
+</svg>
+</div>
+<p class="text-[10px] font-bold leading-normal tracking-[0.05em]">SCAN</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center" data-icon="Printer" data-size="24px" data-weight="regular">
+<svg fill="currentColor" height="24px" viewbox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M214.67,72H200V40a8,8,0,0,0-8-8H64a8,8,0,0,0-8,8V72H41.33C27.36,72,16,82.77,16,96v80a8,8,0,0,0,8,8H56v32a8,8,0,0,0,8,8H192a8,8,0,0,0,8-8V184h32a8,8,0,0,0,8-8V96C240,82.77,228.64,72,214.67,72ZM72,48H184V72H72ZM184,208H72V160H184Zm40-40H200V152a8,8,0,0,0-8-8H64a8,8,0,0,0-8,8v16H32V96c0-4.41,4.19-8,9.33-8H214.67c5.14,0,9.33,3.59,9.33,8Zm-24-52a12,12,0,1,1-12-12A12,12,0,0,1,200,116Z"></path>
+</svg>
+</div>
+<p class="text-[10px] font-bold leading-normal tracking-[0.05em]">PRINT</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full bg-primary-fixed/30 text-on-surface" href="#">
+<div class="flex h-8 items-center justify-center" data-icon="User" data-size="24px" data-weight="fill">
+<svg fill="currentColor" height="24px" viewbox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M230.93,220a8,8,0,0,1-6.93,4H32a8,8,0,0,1-6.92-12c15.23-26.33,38.7-45.21,66.09-54.16a72,72,0,1,1,73.66,0c27.39,8.95,50.86,27.83,66.09,54.16A8,8,0,0,1,230.93,220Z"></path>
+</svg>
+</div>
+<p class="text-[10px] font-bold leading-normal tracking-[0.05em]">PROFILE</p>
+</a>
+</div>
+</nav>
+</div>
+<script>
+        function switchTab(tabId) {
+            // Update Tab Buttons
+            document.querySelectorAll('[id^="tab-"]').forEach(btn => {
+                btn.classList.remove('border-primary', 'text-primary');
+                btn.classList.add('border-transparent', 'text-on-surface-variant');
+            });
+            document.getElementById('tab-' + tabId).classList.add('border-primary', 'text-primary');
+            document.getElementById('tab-' + tabId).classList.remove('border-transparent', 'text-on-surface-variant');
+
+            // Update Tab Content
+            document.querySelectorAll('[data-tab-content]').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById('content-' + tabId).classList.add('active');
+        }
+    </script>
+</body></html>

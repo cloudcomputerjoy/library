@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Atheneum | Notifications</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#c1ffc5",
+                    "on-secondary-fixed": "#25005a",
+                    "surface-tint": "#0053db",
+                    "secondary-fixed": "#eaddff",
+                    "secondary-container": "#8a4cfc",
+                    "surface-dim": "#d9dadb",
+                    "surface": "#f8f9fa",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#00174b",
+                    "tertiary-fixed-dim": "#4ae176",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e1e3e4",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "primary-fixed": "#dbe1ff",
+                    "on-primary-container": "#eeefff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#d2bbff",
+                    "outline-variant": "#c3c6d7",
+                    "on-background": "#191c1d",
+                    "on-tertiary-fixed-variant": "#005321",
+                    "on-secondary-fixed-variant": "#5a00c6",
+                    "on-secondary-container": "#fffbff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#2563eb",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-tertiary-fixed": "#002109",
+                    "on-surface-variant": "#434655",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#6bff8f",
+                    "tertiary": "#006229",
+                    "surface-bright": "#f8f9fa",
+                    "secondary": "#712ae2",
+                    "tertiary-container": "#007e37",
+                    "surface-container-high": "#e7e8e9",
+                    "primary": "#004ac6",
+                    "inverse-primary": "#b4c5ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#737686",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container": "#edeeef",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "surface-container-highest": "#e1e3e4",
+                    "background": "#f8f9fa",
+                    "on-surface": "#191c1d",
+                    "inverse-surface": "#2e3132"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "16px",
+                    "xl": "24px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(248, 249, 250, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-slate-900/70 backdrop-blur-xl shadow-sm dark:shadow-none h-16 flex justify-between items-center px-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="Student Profile" class="w-full h-full object-cover" data-alt="professional headshot of a student with a friendly expression, soft natural indoor lighting, blurred campus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA57LA-YNzbMb3ajGloC9kooKne3rrIX5m3cDkf8gv-mjE-hyZ_uIMlp1ntOY-licndevu-QmQg4woK307ZzLY212EpzphtylBkAeDSpd_Qb7fiqr9PIrEybCpu_8UYH-5s_omkyvJKgD9FDoC3g12UbEJwb-tDhndcbkYo_A0v0mSalEaIuKLUye7n5osaxraif-OPtDrtUYIQ7wR4Zsz2cDEaZG2apSbI8L66aiTSmhaFm1CwcZk_7lMPkJNQnSN8bIv9rp4u8yw"/>
+</div>
+<span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-headline tracking-tight">Atheneum</span>
+</div>
+<button class="material-symbols-outlined text-blue-600 dark:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 p-2 rounded-full transition-colors transition-transform duration-200 active:scale-90" data-icon="notifications">notifications</button>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto pb-40">
+<!-- Page Title -->
+<div class="mb-8">
+<h1 class="font-headline text-3xl font-bold tracking-tight text-on-surface mb-2">Notifications</h1>
+<p class="text-on-surface-variant text-sm">Stay updated with your academic journey and library activity.</p>
+</div>
+<!-- Priority Alert Section -->
+<section class="mb-10">
+<h2 class="font-headline text-xs font-bold uppercase tracking-widest text-on-surface-variant/60 mb-4 px-2">Urgent Attention</h2>
+<!-- High Priority Card -->
+<div class="bg-error-container/40 p-5 rounded-xl mb-4 flex gap-4 items-start shadow-sm transition-all hover:bg-error-container/60 cursor-pointer">
+<div class="bg-error text-on-error w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="priority_high">priority_high</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-semibold text-on-error-container">Overdue Notice</h3>
+<span class="text-[10px] font-medium uppercase tracking-tighter bg-error-container text-on-error-container px-2 py-0.5 rounded-full">Now</span>
+</div>
+<p class="text-sm text-on-error-container/80 leading-relaxed">"The Great Gatsby" was due yesterday. Please return it to the central library to avoid further fines.</p>
+<div class="mt-4 flex gap-2">
+<button class="bg-error text-on-error px-4 py-2 rounded-lg text-xs font-semibold transition-transform active:scale-95">Pay Fine</button>
+<button class="bg-white/50 text-on-error-container px-4 py-2 rounded-lg text-xs font-semibold transition-transform active:scale-95">View Details</button>
+</div>
+</div>
+</div>
+</section>
+<!-- General Notifications -->
+<section class="space-y-4">
+<h2 class="font-headline text-xs font-bold uppercase tracking-widest text-on-surface-variant/60 mb-4 px-2">Recent Updates</h2>
+<!-- Return Notification -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex gap-4 items-start transition-all hover:bg-surface-container-low cursor-pointer">
+<div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="assignment_return">assignment_return</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-semibold text-on-surface">Book Successfully Returned</h3>
+<span class="text-[11px] text-on-surface-variant font-medium">2h ago</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Your return of "Design Systems for Scale" has been processed successfully.</p>
+</div>
+</div>
+<!-- Waitlist Notification -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex gap-4 items-start transition-all hover:bg-surface-container-low cursor-pointer">
+<div class="bg-purple-100 text-purple-600 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-semibold text-on-surface">Reservation Available</h3>
+<span class="text-[11px] text-on-surface-variant font-medium">5h ago</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">"The Age of AI" is now available for pickup at the front desk. Reserved until Oct 24.</p>
+</div>
+</div>
+<!-- Payment Notification -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex gap-4 items-start transition-all hover:bg-surface-container-low cursor-pointer">
+<div class="bg-green-100 text-green-700 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-semibold text-on-surface">Payment Confirmed</h3>
+<span class="text-[11px] text-on-surface-variant font-medium">Yesterday</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Your monthly subscription to Digital Archives has been renewed for $12.99.</p>
+</div>
+</div>
+<!-- System Notification -->
+<div class="bg-surface-container-lowest p-5 rounded-xl flex gap-4 items-start transition-all hover:bg-surface-container-low cursor-pointer">
+<div class="bg-slate-100 text-slate-500 w-12 h-12 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline font-semibold text-on-surface">Library Holiday Hours</h3>
+<span class="text-[11px] text-on-surface-variant font-medium">2d ago</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">The main campus library will be closed this Friday for maintenance. Study pods remain open 24/7.</p>
+</div>
+</div>
+</section>
+<!-- Empty State Logic (Placeholder) -->
+<div class="hidden py-20 flex-col items-center justify-center text-center opacity-40">
+<span class="material-symbols-outlined text-6xl mb-4" data-icon="notifications_off">notifications_off</span>
+<p class="font-headline font-semibold">All caught up!</p>
+<p class="text-sm">Check back later for more updates.</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-24 flex justify-around items-center px-2 bg-white/95 backdrop-blur-xl border-t border-slate-100 rounded-t-[32px] z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.04)]">
+<!-- LIBRARY (Active) -->
+<a class="flex flex-col items-center justify-center gap-1 px-6 py-3 bg-blue-50/50 rounded-3xl transition-all" href="#">
+<span class="material-symbols-outlined text-blue-600 font-bold" style="font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;">menu_book</span>
+<span class="text-[11px] font-bold tracking-wider text-blue-600 font-headline uppercase">Library</span>
+</a>
+<!-- SEARCH -->
+<a class="flex flex-col items-center justify-center gap-1 px-4 py-3 text-slate-400 hover:text-blue-500 transition-all" href="#">
+<span class="material-symbols-outlined text-[28px]">search</span>
+<span class="text-[11px] font-bold tracking-wider uppercase font-headline">Search</span>
+</a>
+<!-- SCAN -->
+<a class="flex flex-col items-center justify-center gap-1 px-4 py-3 text-slate-400 hover:text-blue-500 transition-all" href="#">
+<span class="material-symbols-outlined text-[28px]">qr_code_scanner</span>
+<span class="text-[11px] font-bold tracking-wider uppercase font-headline">Scan</span>
+</a>
+<!-- PRINT -->
+<a class="flex flex-col items-center justify-center gap-1 px-4 py-3 text-slate-400 hover:text-blue-500 transition-all" href="#">
+<span class="material-symbols-outlined text-[28px]">print</span>
+<span class="text-[11px] font-bold tracking-wider uppercase font-headline">Print</span>
+</a>
+<!-- PROFILE -->
+<a class="flex flex-col items-center justify-center gap-1 px-4 py-3 text-slate-400 hover:text-blue-500 transition-all" href="#">
+<span class="material-symbols-outlined text-[28px]">person</span>
+<span class="text-[11px] font-bold tracking-wider uppercase font-headline">Profile</span>
+</a>
+</nav>
+</body></html>

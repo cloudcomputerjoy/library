@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Atheneum | Secure Payments</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#c1ffc5",
+                        "on-secondary-fixed": "#25005a",
+                        "surface-tint": "#0053db",
+                        "secondary-fixed": "#eaddff",
+                        "secondary-container": "#8a4cfc",
+                        "surface-dim": "#d9dadb",
+                        "surface": "#f8f9fa",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#00174b",
+                        "tertiary-fixed-dim": "#4ae176",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e1e3e4",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "primary-fixed": "#dbe1ff",
+                        "on-primary-container": "#eeefff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "outline-variant": "#c3c6d7",
+                        "on-background": "#191c1d",
+                        "on-tertiary-fixed-variant": "#005321",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "on-secondary-container": "#fffbff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#2563eb",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed": "#002109",
+                        "on-surface-variant": "#434655",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#6bff8f",
+                        "tertiary": "#006229",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#712ae2",
+                        "tertiary-container": "#007e37",
+                        "surface-container-high": "#e7e8e9",
+                        "primary": "#004ac6",
+                        "inverse-primary": "#b4c5ff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#737686",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container": "#edeeef",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "surface-container-highest": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "inverse-surface": "#2e3132"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "16px",
+                        "xl": "24px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-mesh {
+            background-color: #f8f9fa;
+            background-image: radial-gradient(at 0% 0%, hsla(221,83%,93%,1) 0, transparent 50%), 
+                              radial-gradient(at 50% 0%, hsla(262,89%,93%,1) 0, transparent 50%);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-mesh font-body text-on-surface min-h-[884px] pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl shadow-sm h-16 flex justify-between items-center px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-sm">
+<img alt="Student Profile Photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDiPGsiFq_wJES7fBg2r6jAHGFrVPfrhG2o07yFtw2QHnDEz6qGkVxT4Ro1dc3yF-euc-wmPO2LVfixYpaGVmAlx3Mz4O2VSoJDdYp3o5jeOms4JbygwJTAtegIcva1i-0G1cYMqeLmRHozItBHM0p2yA6tYggZmuI7G8argTys8amRA8QYiF_-Sn5wreSEPzAQisMSKE_-Z6KyqTcTbZ0lYzGI-N8T-YgQTu8kEaZCiU7fIV9qaDJEibSrO63Lh2n6pyGkjyKOow"/>
+</div>
+<span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-headline tracking-tight">Atheneum</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-slate-100 transition-colors text-slate-500">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Hero Balance Section -->
+<section class="mb-10 text-center relative">
+<div class="inline-block px-4 py-1.5 mb-4 rounded-full bg-secondary-fixed/30 text-on-secondary-fixed-variant text-xs font-semibold tracking-wider uppercase">
+                Outstanding Balance
+            </div>
+<div class="flex flex-col items-center">
+<h1 class="text-6xl md:text-7xl font-extrabold font-headline tracking-tighter text-on-surface">
+<span class="text-blue-600">$</span>42.50
+                </h1>
+<p class="text-on-surface-variant mt-2 font-medium">Due by Oct 24, 2023</p>
+</div>
+<!-- Abstract background shape for visual depth -->
+<div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary-container/10 blur-[80px] rounded-full"></div>
+</section>
+<!-- Fine Breakdown Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+<!-- Late Return Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-blue-50 rounded-2xl text-blue-600">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<span class="font-headline font-bold text-xl text-on-surface">$12.50</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Late Return</h3>
+<p class="text-on-surface-variant text-sm mt-1">The Great Gatsby (3 days overdue)</p>
+</div>
+</div>
+<!-- Damage Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.04)] flex flex-col justify-between">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-purple-50 rounded-2xl text-purple-600">
+<span class="material-symbols-outlined">broken_image</span>
+</div>
+<span class="font-headline font-bold text-xl text-on-surface">$30.00</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Damage Fee</h3>
+<p class="text-on-surface-variant text-sm mt-1">Advanced Physics vol. 2 (Liquid damage)</p>
+</div>
+</div>
+</div>
+<!-- Payment Method Selection -->
+<section class="mb-12">
+<h2 class="font-headline font-bold text-xl text-on-surface mb-6 px-1">Payment Method</h2>
+<div class="space-y-3">
+<!-- bKash Option -->
+<div class="flex items-center justify-between p-5 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-10 rounded-md flex items-center justify-center overflow-hidden bg-white border border-outline-variant/30">
+<img alt="bKash logo" class="w-full h-full object-contain p-1" src="https://lh3.googleusercontent.com/aida/ADBb0ujaCMFN2INllr5hzT5WhQ-lv8Dn32rWeCEdlrFm969LjD0XZxPS_BM6jrmcQbGLGKqmzRC98HnF3ZLRyiIT5bDJ3pF25bn4jdTNXKW3F6ylRMD27IDn_xc8A-2GD8u8UdcZvcwCEhf6r3oh6lkjNybzmfGxFVpdPsBHQwGjgsdKkYgdnQAR-omP8c7PryJFiL1NPrQGIKYH36MgNrNz-aa42yOyvdzwitY7V_Z1iFbLCr3SVUYm4xcrmEBiDI_RwcivqmBEUuvCsg"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">bKash</p>
+<p class="text-xs text-on-surface-variant">Pay with bKash Account</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant group-hover:border-primary-container transition-colors"></div>
+</div>
+<!-- Nagad Option -->
+<div class="flex items-center justify-between p-5 bg-surface-container-low rounded-xl hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-10 rounded-md flex items-center justify-center overflow-hidden bg-white border border-outline-variant/30">
+<img alt="Nagad logo" class="w-full h-full object-contain p-1" src="https://lh3.googleusercontent.com/aida/ADBb0ugO9ORddCUQIhDMEunCq9U2hjT7AxDB02LU2QQc0UAM18xgU7Nt2Anty1qa0_eMtVbeKVxd9ImDCjv9c-1eH0UuOYhwV9XmQdJROd3uxw3xTSTgfeCjxo23Im6zNoy-8-cCDu_0VJtKjHOTvzMXwyhVl_nmQjJQ3jrf7jbJlN9wRfj7NxJKlfwD18cKKpuXl82BFAWPGNoYQQ95BVkT3wf-e45VNIaUcQNBFAZaJdlx1QgXtWu7c3XSiEP9zwv4HUr_Z0cf3tV6-A"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Nagad</p>
+<p class="text-xs text-on-surface-variant">Pay with Nagad Account</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant group-hover:border-primary-container transition-colors"></div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<div class="flex flex-col items-center gap-4">
+<button class="group relative w-full h-14 bg-gradient-to-r from-primary-container to-secondary-container rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-xl shadow-blue-500/20 active:scale-95 transition-all duration-200">
+<!-- Pulse Effect Element -->
+<span class="absolute inset-0 rounded-xl bg-white/20 animate-ping opacity-0 group-hover:opacity-100 transition-opacity"></span>
+<span class="flex items-center gap-2">
+                    Pay Now <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</span>
+</button>
+<p class="text-on-surface-variant text-xs flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">lock</span>
+                Secure 256-bit encrypted transaction
+            </p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 bg-white/80 dark:bg-slate-950/80 backdrop-blur-2xl flex justify-around items-center px-4 pb-2 z-50 rounded-t-[24px] shadow-[0_-10px_30px_rgba(0,0,0,0.04)]">
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-1.5 hover:text-blue-500 transition-all">
+<span class="material-symbols-outlined">local_library</span>
+<span class="text-[11px] font-medium font-inter">Library</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-1.5 hover:text-blue-500 transition-all">
+<span class="material-symbols-outlined">print</span>
+<span class="text-[11px] font-medium font-inter">Print</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-1.5 hover:text-blue-500 transition-all">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[11px] font-medium font-inter">Attendance</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-50 text-blue-700 rounded-2xl px-4 py-1.5 shadow-inner">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="text-[11px] font-medium font-inter">Payments</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 px-4 py-1.5 hover:text-blue-500 transition-all">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[11px] font-medium font-inter">Alerts</span>
+</div>
+</nav>
+</body></html>

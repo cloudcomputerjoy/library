@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | The Atheneum</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "surface-bright": "#f8f9fa",
+                        "inverse-primary": "#b4c5ff",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005321",
+                        "outline-variant": "#c3c6d7",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-dim": "#d9dadb",
+                        "secondary-fixed": "#eaddff",
+                        "tertiary-fixed": "#6bff8f",
+                        "secondary-container": "#8a4cfc",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#434655",
+                        "surface-container": "#edeeef",
+                        "surface": "#f8f9fa",
+                        "tertiary-container": "#007e37",
+                        "on-primary-fixed": "#00174b",
+                        "secondary": "#712ae2",
+                        "surface-container-high": "#e7e8e9",
+                        "background": "#f8f9fa",
+                        "on-tertiary-container": "#c1ffc5",
+                        "surface-container-highest": "#e1e3e4",
+                        "primary": "#004ac6",
+                        "primary-container": "#2563eb",
+                        "primary-fixed": "#dbe1ff",
+                        "on-primary-container": "#eeefff",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "tertiary": "#006229",
+                        "surface-variant": "#e1e3e4",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-secondary-fixed": "#25005a",
+                        "on-surface": "#191c1d",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "outline": "#737686",
+                        "tertiary-fixed-dim": "#4ae176",
+                        "on-tertiary-fixed": "#002109",
+                        "on-background": "#191c1d",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-secondary-container": "#fffbff",
+                        "surface-tint": "#0053db"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "xxl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex items-center justify-center p-6 relative overflow-hidden">
+<!-- Background Decorative Elements -->
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary-container/10 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-secondary-container/10 blur-[120px]"></div>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-[480px] z-10">
+<!-- Branding Header -->
+<header class="text-center mb-12">
+<div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-container to-secondary-container rounded-3xl mb-6 shadow-xl shadow-primary-container/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="auto_stories">auto_stories</span>
+</div>
+<h1 class="text-4xl font-headline font-extrabold tracking-tight text-on-surface mb-2">The Atheneum</h1>
+<p class="text-on-surface-variant font-body leading-relaxed max-w-[320px] mx-auto">
+                Step back into your scholarly sanctuary and explore your digital collection.
+            </p>
+</header>
+<!-- Login Container -->
+<section class="glass-card rounded-3xl p-8 shadow-[0_20px_40px_rgba(0,0,0,0.04)] ring-1 ring-white/50">
+<form class="space-y-6">
+<!-- Email Input Group -->
+<div class="space-y-2">
+<label class="block text-sm font-medium text-on-surface-variant ml-1" for="email">Academic Email</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline transition-colors group-focus-within:text-primary" data-icon="mail">mail</span>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-highest rounded-xxl border-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline/60" id="email" placeholder="u.name@campus.edu" type="email"/>
+</div>
+</div>
+<!-- Auth Options Toggle (Semantic Visual) -->
+<div class="flex items-center justify-between gap-4 py-2">
+<button class="flex-1 py-3 px-4 bg-surface-container-high rounded-xxl text-sm font-semibold text-primary flex items-center justify-center gap-2 transition-all hover:bg-surface-container-highest" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="key">key</span>
+                        Password
+                    </button>
+<button class="flex-1 py-3 px-4 bg-surface-container-lowest rounded-xxl text-sm font-semibold text-on-surface-variant flex items-center justify-center gap-2 ring-1 ring-outline-variant/30 transition-all hover:bg-surface-container-high" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="sms">sms</span>
+                        OTP Option
+                    </button>
+</div>
+<!-- CTA Button -->
+<button class="w-full h-14 bg-gradient-to-r from-primary-container to-secondary-container text-white font-headline font-bold text-lg rounded-xxl shadow-lg shadow-primary-container/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200" type="submit">
+                    Continue to Library
+                </button>
+</form>
+<!-- Secondary Actions -->
+<div class="mt-8 flex flex-col items-center gap-4 border-t border-outline-variant/10 pt-8">
+<button class="text-sm font-medium text-primary hover:text-secondary-container transition-colors">
+                    Forgot Password?
+                </button>
+<p class="text-sm text-on-surface-variant">
+                    New scholar? <button class="font-bold text-on-surface hover:underline transition-all">Request Access</button>
+</p>
+</div>
+</section>
+<!-- Contextual Support Info -->
+<footer class="mt-12 text-center">
+<div class="inline-flex items-center gap-6 px-6 py-3 bg-surface-container-low rounded-full">
+<div class="flex -space-x-2">
+<img alt="" class="w-6 h-6 rounded-full ring-2 ring-surface" data-alt="profile portrait of a smiling young woman with dark hair in a bright office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm9n4QNz8aCY6jfJVDU_YMjWUuJTi_Gt5itxRq9ZT0vIiCccgvJNwV8A0dC9O09HGUuwUx0AQxXAIYGQdB8qMR4owNk9Ed3RayCklO7h3avJ-5H-mAKykSYeXG-lcIev1VLky3q2CyeT7eTGJoIOVP8gI786eXWOKU9aQzFLCHlUt3qxu9_31LfFM81mA-RiUY_S4qKRBbhhc1wfyS7VRqkIWDHE-r1oxKTu2jtnMqdq2vSg4zomNOl5Y8MNb683C_qsA4wVNfiTE"/>
+<img alt="" class="w-6 h-6 rounded-full ring-2 ring-surface" data-alt="close-up portrait of a professional man with short beard and glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnf-7Y3tonOpJy11HmKib86s2nu1_5UHLtaLunS9jy4dY2LXplUi0TfsA9ZoiqjOSOTb52XBgfQX2LUZDhH7ZLBt8EhIOipaKU138cBHXOfmxM5KPJm61smgWCHu_4jtiFrbK7-bd_72I-2lRPMz7_NkEE8pGtsSGbOT7cMP3n7hatYLq3b6e06hPL0YcODStaxPzpZMUAbEw9Hoz_tPGHJMVVj0MBCBmme-MtGlW5UiGerlDkaF-gdgMwTqFCOylm8gZpmxXum_M"/>
+<img alt="" class="w-6 h-6 rounded-full ring-2 ring-surface" data-alt="portrait of a young woman with a friendly expression outdoors in daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3MpfgAaDLxKRy-6p5DxqCD864wfdhL9StbmBTESHa9Ffd7ILEOoIejxpe8O9Hor7BBUCJfAY10nbyo2mDZlve96mAU_NWRY6kXuEv8UiTzJGFZOrrhLxWD_-gZ2cl-PIbcagJ1HIcPQnI4NCEi8IZsHtT9mJ-Srvr4LzcvCHI1bnhtquiF3OSq0eXdr0Yt3B1ypa_A3SsdP1PejmI1vD_O4fAEzzl6IpaJxIuFUm19ordlWmng8fS9rvT9vjfWXb5xS2VWbM-vYo"/>
+</div>
+<span class="text-xs font-medium text-on-surface-variant tracking-wide">Join 12,000+ researchers today</span>
+</div>
+</footer>
+</main>
+<!-- Side Graphic (Only visible on larger screens to maintain minimalism) -->
+<div class="hidden lg:block fixed right-0 top-0 h-full w-[35%] overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-l from-surface-container-low to-transparent z-10"></div>
+<img alt="" class="h-full w-full object-cover opacity-40 grayscale hover:grayscale-0 transition-all duration-1000" data-alt="dramatic interior of a classical massive library with tall wooden shelves filled with thousands of old books and soft warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXUPs-wyrbdwlS9N5MvEpEOkS2nSXnDUWmO_-NfH2CbwCthxwOEXHygr7Ani2AjPMcVZ8UjFsqT4Xu2BZeQQJp5uomYS1gUmljPrqIryjCcVIbkT9LCfu8VvI6ieYb1FLbD2IONRhLV1s7auZkS2r8QfscgPLxE3gQT_MmpUDS0UXpiNutQ35B4GL-WLc8R4536MXl9XOIFvA_IcLIB3_6HbI0Bpn_foXGeD1LIXxwWLio5_8zM4vjgiOcnBk3t_KXW9SUpn7RWkM"/>
+<div class="absolute bottom-12 left-12 z-20 max-w-[280px]">
+<div class="glass-card p-6 rounded-3xl shadow-xl">
+<span class="material-symbols-outlined text-secondary-container mb-3 block" data-icon="format_quote" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-sm font-medium text-on-surface italic leading-relaxed">
+                    "Information is the currency of democracy, and the library is our central bank."
+                </p>
+<p class="text-[10px] uppercase tracking-widest mt-4 text-outline font-bold">Curated Intelligence</p>
+</div>
+</div>
+</div>
+</body></html>
